@@ -3,485 +3,492 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#111111">
-<meta name="description" content="DLS Gaming — Premium gaming marketplace.">
-<title>DLS Gaming | Premium Marketplace</title>
+<title>DLS GAMING</title>
 
 <style>
-:root {
-  --bg: #101010;
-  --panel: #181818;
-  --border: #303030;
-  --gold: #c8a96e;
-  --text: #f5f3ee;
-  --muted: #a7a7a7;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-* { box-sizing: border-box; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
-
-header {
-  border-bottom: 1px solid var(--border);
-  background: #111;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.nav {
-  max-width: 1150px;
-  margin: auto;
-  padding: 18px 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-}
-
-.logo {
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: 23px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: #ddd;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-nav a:hover { color: var(--gold); }
-
-button, .button {
-  display: inline-block;
-  border: 1px solid var(--gold);
-  background: var(--gold);
-  color: #111;
-  padding: 11px 18px;
-  border-radius: 3px;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-button:hover, .button:hover {
-  background: #e0c48f;
-}
-
-.outline {
-  background: transparent;
-  color: var(--gold);
+    background: #0d0d0f;
+    color: #f5f4f0;
+    font-family: Arial, sans-serif;
 }
 
 .container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 22px;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
 }
 
+/* HEADER */
+header {
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #303035;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #5146ff;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* HERO */
 .hero {
-  padding: 95px 0 85px;
-  border-bottom: 1px solid var(--border);
-  background:
-    radial-gradient(ellipse at 80% 30%, #282218 0%, transparent 45%),
-    var(--bg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 50px 0;
 }
 
-.eyebrow {
-  color: var(--gold);
-  font-size: 12px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+.hero-content,
+.hero-image {
+    border: 1px solid #303035;
+    border-radius: 25px;
+    padding: 40px;
+    min-height: 380px;
 }
 
-h1, h2, h3 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: normal;
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: radial-gradient(
+        circle at top right,
+        #252044,
+        #101013 60%
+    );
+}
+
+.label {
+    color: #aaa9b0;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 h1 {
-  font-size: clamp(40px, 7vw, 72px);
-  line-height: 1.08;
-  max-width: 700px;
-  margin: 18px 0;
+    font-size: clamp(50px, 8vw, 90px);
+    line-height: 0.95;
+    letter-spacing: -5px;
+    margin: 30px 0 20px;
 }
 
-h1 span { color: var(--gold); }
-
-.hero p {
-  color: var(--muted);
-  max-width: 520px;
-  margin-bottom: 28px;
+.description {
+    color: #c5c4ca;
+    font-size: 23px;
+    line-height: 1.4;
 }
 
-.section { padding: 65px 0; }
-
-.section-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 15px;
-  margin-bottom: 28px;
+.button {
+    display: inline-block;
+    background: #f5f4f0;
+    color: #0d0d0f;
+    text-decoration: none;
+    padding: 17px 23px;
+    margin-top: 30px;
+    font-weight: bold;
+    width: fit-content;
+    transition: 0.3s;
 }
 
-.section-heading h2 {
-  font-size: 34px;
-  margin: 5px 0;
+.button:hover {
+    background: #5146ff;
+    color: white;
+    transform: translateY(-3px);
 }
 
-.muted { color: var(--muted); }
+/* HERO ART */
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(
+        circle,
+        #29215c,
+        #101013 65%
+    );
+    position: relative;
+    overflow: hidden;
+}
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+.circle {
+    width: 230px;
+    height: 230px;
+    border: 1px solid #7770ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 80px #5146ff33;
+}
+
+.circle span {
+    font-size: 65px;
+    font-weight: 900;
+    letter-spacing: -5px;
+}
+
+.art-label {
+    position: absolute;
+    bottom: 22px;
+    left: 22px;
+    color: #aaa9b0;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* SECTIONS */
+section {
+    padding: 40px 0;
+}
+
+.section-label {
+    color: #7168ff;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: clamp(32px, 5vw, 50px);
+    letter-spacing: -2px;
+    margin: 15px 0 30px;
+}
+
+/* PRODUCT CARDS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
 }
 
 .card {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  transition: border-color .2s;
+    background: #101013;
+    border: 1px solid #303035;
+    border-radius: 22px;
+    overflow: hidden;
+    transition: 0.3s;
 }
 
-.card:hover { border-color: var(--gold); }
-
-.card-art {
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #25221c, #151515);
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: 36px;
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #5146ff;
 }
 
-.card-content { padding: 20px; }
-
-.tag {
-  color: var(--gold);
-  font-size: 11px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.card-image {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(
+        circle,
+        #252044,
+        #151518
+    );
+    font-size: 55px;
 }
 
-.card h3 {
-  font-size: 21px;
-  margin: 8px 0;
+.card-content {
+    padding: 23px;
 }
 
-.card p {
-  color: var(--muted);
-  font-size: 13px;
+.card-content small {
+    color: #8c86ff;
+    letter-spacing: 2px;
 }
 
-.price {
-  font-size: 23px;
-  color: var(--gold);
-  margin: 14px 0;
+.card-content h3 {
+    margin: 15px 0;
+    font-size: 22px;
 }
 
-.card button { width: 100%; }
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.card-content p {
+    color: #aaa9b0;
+    line-height: 1.6;
+    font-size: 14px;
 }
 
-.feature {
-  padding: 25px;
-  border: 1px solid var(--border);
-  background: #141414;
+.card-content a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid #303035;
+    margin-top: 22px;
+    padding-top: 18px;
 }
 
-.feature h3 { color: var(--gold); }
-
-form {
-  max-width: 500px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  padding: 25px;
+/* ABOUT */
+.about {
+    border: 1px solid #303035;
+    border-radius: 25px;
+    padding: 40px;
+    background: linear-gradient(
+        120deg,
+        #17152a,
+        #101013
+    );
 }
 
-label {
-  display: block;
-  font-size: 13px;
-  margin: 12px 0 5px;
+.about p {
+    color: #c5c4ca;
+    line-height: 1.8;
+    font-size: 17px;
+    max-width: 700px;
 }
 
-input, textarea {
-  width: 100%;
-  padding: 13px;
-  background: #101010;
-  border: 1px solid #393939;
-  color: white;
-  border-radius: 2px;
-  font: inherit;
+/* CONTACT */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-input:focus, textarea:focus {
-  outline: 1px solid var(--gold);
-}
-
-form button { margin-top: 18px; }
-
-.notice {
-  border-left: 2px solid var(--gold);
-  padding: 12px 16px;
-  background: #191714;
-  color: var(--muted);
-  font-size: 13px;
-  margin: 20px 0;
-}
-
+/* FOOTER */
 footer {
-  border-top: 1px solid var(--border);
-  padding: 30px 0;
-  color: var(--muted);
-  font-size: 12px;
+    margin-top: 40px;
+    padding: 30px 0;
+    border-top: 1px solid #303035;
+    color: #888;
+    font-size: 13px;
 }
 
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  flex-wrap: wrap;
-}
+/* MOBILE */
+@media (max-width: 700px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 25px;
+    }
 
-[hidden] { display: none !important; }
+    .hero-content,
+    .hero-image {
+        min-height: 330px;
+        padding: 28px;
+    }
 
-@media (max-width: 720px) {
-  .nav { align-items: flex-start; flex-direction: column; }
-  nav { gap: 14px; }
-  .hero { padding: 65px 0; }
-  .grid { grid-template-columns: 1fr; }
-  .features { grid-template-columns: 1fr; }
-  .section-heading { align-items: flex-start; flex-direction: column; }
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    h1 {
+        letter-spacing: -3px;
+    }
+
+    .contact {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<div class="container">
+
 <header>
-  <div class="nav">
-    <div class="logo">DLS GAMING</div>
+    <div class="logo">
+        <span>✦</span> DLS GAMING
+    </div>
+
     <nav>
-      <a href="#home">Home</a>
-      <a href="#marketplace">Marketplace</a>
-      <a href="#sell">Sell</a>
-      <a href="#account">Account</a>
+        <a href="#home">Home</a>
+        <a href="#store">Store</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </div>
 </header>
 
-<main>
-<section class="hero" id="home">
-  <div class="container">
-    <div class="eyebrow">The Gaming Marketplace</div>
-    <h1>Gaming, with a<br><span>premium edge.</span></h1>
-    <p>
-      Discover gaming marketplace listings through a clean,
-      premium experience designed for gamers.
-    </p>
-    <a class="button" href="#marketplace">Explore Marketplace</a>
-    <a class="button outline" href="#sell">Submit a Listing</a>
-  </div>
-</section>
+<main id="home">
 
-<section class="section" id="marketplace">
-  <div class="container">
-    <div class="section-heading">
-      <div>
-        <div class="eyebrow">Curated Listings</div>
-        <h2>Marketplace</h2>
-        <div class="muted">Explore the latest listings.</div>
-      </div>
+<section class="hero">
+
+    <div class="hero-content">
+        <div class="label">Gaming Store — Est. 2026</div>
+
+        <h1>DLS<br>GAMING</h1>
+
+        <p class="description">
+            Level up your game.<br>
+            Discover your next advantage.
+        </p>
+
+        <a class="button" href="#store">
+            Explore Store ↗
+        </a>
     </div>
 
-    <input id="search"
-      aria-label="Search listings"
-      placeholder="Search listings..."
-      oninput="renderListings()"
-      style="max-width:400px;margin-bottom:25px">
+    <div class="hero-image">
+        <div class="circle">
+            <span>DLS</span>
+        </div>
 
-    <div class="grid" id="listings"></div>
-
-    <div class="notice">
-      Listings shown here are examples. No real accounts are offered
-      until the site owner adds and verifies actual listings.
-      Check the game publisher's account-transfer rules before trading.
+        <div class="art-label">
+            PLAY DIFFERENT. PLAY SMART.
+        </div>
     </div>
-  </div>
+
 </section>
 
-<section class="section" id="why">
-  <div class="container">
-    <div class="eyebrow">Our Approach</div>
-    <h2>Simple. Clear. Professional.</h2>
+<section id="store">
 
-    <div class="features">
-      <div class="feature">
-        <h3>01 — Browse</h3>
-        <p class="muted">Explore listings and compare asking prices.</p>
-      </div>
-      <div class="feature">
-        <h3>02 — Enquire</h3>
-        <p class="muted">Contact the site owner to discuss a listing.</p>
-      </div>
-      <div class="feature">
-        <h3>03 — Stay Safe</h3>
-        <p class="muted">Never share passwords or recovery codes.</p>
-      </div>
+    <div class="section-label">
+        Selected Collection / 001
     </div>
-  </div>
+
+    <h2>Explore the store.</h2>
+
+    <div class="products">
+
+        <div class="card">
+            <div class="card-image">🎮</div>
+
+            <div class="card-content">
+                <small>01 / GAMING</small>
+                <h3>Gaming Essentials</h3>
+
+                <p>
+                    Discover gaming accessories
+                    and essentials for your setup.
+                </p>
+
+                <a href="#contact">
+                    Enquire Now ↗
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">✦</div>
+
+            <div class="card-content">
+                <small>02 / DIGITAL</small>
+                <h3>Digital Services</h3>
+
+                <p>
+                    Explore our digital services
+                    for gaming enthusiasts.
+                </p>
+
+                <a href="#contact">
+                    Learn More ↗
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">⌘</div>
+
+            <div class="card-content">
+                <small>03 / COMMUNITY</small>
+                <h3>Player Zone</h3>
+
+                <p>
+                    Stay connected for updates
+                    and new offers.
+                </p>
+
+                <a href="#contact">
+                    Connect With Us ↗
+                </a>
+            </div>
+        </div>
+
+    </div>
+
 </section>
 
-<section class="section" id="sell">
-  <div class="container">
-    <div class="eyebrow">For Sellers</div>
-    <h2>Submit a Listing</h2>
-    <p class="muted">Prepare a listing enquiry for the site owner.</p>
+<section id="about">
 
-    <form id="sellForm">
-      <label for="title">Listing title</label>
-      <input id="title" maxlength="70" required
-        placeholder="Enter listing title">
+    <div class="about">
+        <div class="section-label">
+            The DLS Approach
+        </div>
 
-      <label for="price">Asking price (₹)</label>
-      <input id="price" type="number" min="1" required
-        placeholder="Enter asking price">
+        <h2>Less noise.<br>More game.</h2>
 
-      <label for="details">Description</label>
-      <textarea id="details" rows="4" maxlength="500" required
-        placeholder="Describe the listing. Do not include passwords."></textarea>
+        <p>
+            DLS GAMING brings a clean, premium experience
+            to gaming. Explore our collection, discover
+            our services, and contact us for availability
+            and more information.
+        </p>
+    </div>
 
-      <button type="submit">Prepare Enquiry</button>
-      <p class="muted" id="sellMessage" aria-live="polite"></p>
-    </form>
-  </div>
 </section>
 
-<section class="section" id="account">
-  <div class="container">
-    <div class="eyebrow">Customer Area</div>
-    <h2>Account Access</h2>
-    <p class="muted">
-      Secure registration and login will be enabled after authentication
-      is configured. This prototype does not create accounts or send emails.
-    </p>
-    <a class="button outline" href="#sell">Contact About a Listing</a>
-  </div>
+<section id="contact">
+
+    <div class="contact">
+        <div>
+            <div class="section-label">
+                Start a Conversation
+            </div>
+
+            <h2>Need something?</h2>
+
+            <p style="color:#aaa9b0;">
+                Get in touch with DLS GAMING.
+            </p>
+        </div>
+
+        <!-- Replace # with your WhatsApp link -->
+        <a class="button" href="#">
+            Contact DLS ↗
+        </a>
+    </div>
+
 </section>
+
 </main>
 
 <footer>
-  <div class="container footer-inner">
-    <span>© 2026 DLS GAMING</span>
-    <span>Independent marketplace concept. Not affiliated with Garena.</span>
-  </div>
+    © <span id="year"></span> DLS GAMING.
+    Built for players. Designed with intent.
 </footer>
 
+</div>
+
 <script>
-const listings = [
-  {
-    title: "Sample Listing One",
-    price: 500,
-    details: "Example listing. Details and availability are unverified."
-  },
-  {
-    title: "Sample Listing Two",
-    price: 1000,
-    details: "Example listing. Details and availability are unverified."
-  },
-  {
-    title: "Sample Listing Three",
-    price: 750,
-    details: "Example listing. Details and availability are unverified."
-  }
-];
-
-function renderListings() {
-  const query = document.getElementById("search").value.toLowerCase();
-  const area = document.getElementById("listings");
-
-  const matches = listings.filter(item =>
-    (item.title + " " + item.details).toLowerCase().includes(query)
-  );
-
-  area.replaceChildren();
-
-  if (!matches.length) {
-    area.textContent = "No matching listings found.";
-    return;
-  }
-
-  matches.forEach(item => {
-    const card = document.createElement("article");
-    card.className = "card";
-
-    const art = document.createElement("div");
-    art.className = "card-art";
-    art.textContent = "DLS";
-
-    const content = document.createElement("div");
-    content.className = "card-content";
-
-    const tag = document.createElement("div");
-    tag.className = "tag";
-    tag.textContent = "Marketplace listing";
-
-    const heading = document.createElement("h3");
-    heading.textContent = item.title;
-
-    const description = document.createElement("p");
-    description.textContent = item.details;
-
-    const price = document.createElement("div");
-    price.className = "price";
-    price.textContent = "₹" + item.price.toLocaleString("en-IN");
-
-    const button = document.createElement("button");
-    button.className = "outline";
-    button.textContent = "Enquire";
-    button.onclick = () => {
-      document.getElementById("sellMessage").textContent =
-        "Contact the site owner to enquire about: " + item.title;
-      document.getElementById("sell").scrollIntoView();
-    };
-
-    content.append(tag, heading, description, price, button);
-    card.append(art, content);
-    area.append(card);
-  });
-}
-
-document.getElementById("sellForm").addEventListener("submit", event => {
-  event.preventDefault();
-  document.getElementById("sellMessage").textContent =
-    "Your details have not been sent or saved. A secure submission service must be connected first.";
-});
-
-renderListings();
+document.getElementById("year").textContent =
+    new Date().getFullYear();
 </script>
 
 </body>
-  </html>
+</html>
