@@ -55,6 +55,11 @@ h3{font-size:22px;margin:12px 0}
 .contact-box p{color:var(--muted);font-size:14px;line-height:1.6}
 .warning-box{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:16px;padding:20px;font-size:13px;line-height:1.6}
 .warning-box p{min-height:auto}
+.payment-box{margin-top:18px;padding:20px;border:1px solid #756a28;border-radius:16px;background:linear-gradient(135deg,rgba(244,220,56,.08),rgba(255,255,255,.02))}
+.payment-box h3{margin:0 0 8px;color:var(--yellow)}
+.payment-box p{margin:0 0 14px;color:var(--muted);font-size:14px;line-height:1.6}
+.upi-id{display:inline-block;padding:10px 12px;border:1px solid var(--line);border-radius:8px;color:var(--text);font-weight:700;overflow-wrap:anywhere;margin-bottom:14px}
+.payment-note{font-size:12px!important;margin:12px 0 0!important}
 footer{border-top:1px solid #252527;padding:26px 0 34px;color:#85847e;font-size:12px}
 .footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 @media(max-width:740px){
@@ -140,6 +145,13 @@ nav.open{display:flex}
 <p style="margin:0 0 12px;color:var(--muted)">⏳ Dealing since 5+ years</p>
 <hr style="border:none;border-top:1px solid var(--line);margin:12px 0">
 <p style="margin:0;color:var(--yellow);font-weight:bold">⚠️ ADMIN DEALING ONLY. NEVER SEND MONEY OR ACCOUNT DETAILS TO ANYONE ELSE FROM THE GROUP.</p>
+</div>
+<div class="payment-box" id="payment">
+<h3>💳 Pay with UPI</h3>
+<p>Tap the button to open a compatible UPI app. Enter the amount there and verify the recipient before paying.</p>
+<div class="upi-id">UPI ID: 9747316258@ybl</div><br>
+<a class="btn btn-primary" href="upi://pay?pa=9747316258%40ybl&amp;pn=DLS%20GAMING&amp;cu=INR">Pay with UPI ↗</a>
+<p class="payment-note">Payment apps and devices vary. Confirm the displayed recipient and amount in your UPI app. Never share your UPI PIN or OTP with anyone.</p>
 </div>
 </div>
 <div class="actions" style="margin-top:40px">
